@@ -13,40 +13,29 @@ namespace task1._2
         {
 
             #region SentenceComparison
-            if (search.Equals(sentence))
-            {
-                return true;
-            }
-            else if (search.Equals(sentence.ToLower()))
+            if (search.Equals(sentence) || search.Equals(sentence.ToLower()))
             {
                 return true;
             }
             #endregion
+
             #region WordComparison
             string[] SentenceArr = sentence.Split();
 
             foreach (string word in SentenceArr)
             {
-                if (search.Equals(word))
+                if (search.Equals(word) || search.Equals(word.ToLower()))
                 {
                     return true;
                 }
-                else if (search.Equals(word.ToLower()))
+                else if (word.EndsWith(search) || word.StartsWith(search))
                 {
                     return true;
                 }
-                else if (word.EndsWith(search))
-                {
-                    return true;
-                }
-                else if (word.StartsWith(search))
-                {
-                    return true;
-                }
-
             }
 
             #endregion
+
             return false;
         }
     }
