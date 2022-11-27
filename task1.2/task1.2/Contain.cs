@@ -39,7 +39,7 @@ namespace task1._2
                 {
                     return true;
                 }
-                else if (word.StartsWith(word))
+                else if (word.StartsWith(search))
                 {
                     return true;
                 }
