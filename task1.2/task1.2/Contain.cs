@@ -32,6 +32,10 @@ namespace task1._2
                 {
                     return true;
                 }
+                else if (search.EndsWith(word) || search.StartsWith(word))
+                {
+                    return true;
+                }
             }
 
             #endregion
